@@ -19,8 +19,10 @@ def main():
     # Options
     ##############################
     # Validation set
+    # input_depth_dir = os.path.expanduser(
+    #     '~/Kitti/depth/depth_selection/val_selection_cropped/velodyne_raw')
     input_depth_dir = os.path.expanduser(
-        '~/Kitti/depth/depth_selection/val_selection_cropped/velodyne_raw')
+        'E:\\DepthCompletion_Dataset\\KITTI\\depth_selection\\val_selection_cropped\\velodyne_raw')
     data_split = 'val'
 
     # Test set
@@ -29,9 +31,9 @@ def main():
     # data_split = 'test'
 
     # Fast fill with Gaussian blur @90Hz (paper result)
-    fill_type = 'fast'
-    extrapolate = True
-    blur_type = 'gaussian'
+    # fill_type = 'fast'
+    # extrapolate = True
+    # blur_type = 'gaussian'
 
     # Fast Fill with bilateral blur, no extrapolation @87Hz (recommended)
     # fill_type = 'fast'
@@ -39,12 +41,12 @@ def main():
     # blur_type = 'bilateral'
 
     # Multi-scale dilations with extra noise removal, no extrapolation @ 30Hz
-    # fill_type = 'multiscale'
-    # extrapolate = False
-    # blur_type = 'bilateral'
+    fill_type = 'multiscale'
+    extrapolate = False
+    blur_type = 'bilateral'
 
     # Save output to disk or show process
-    save_output = True
+    save_output = False
 
     ##############################
     # Processing
